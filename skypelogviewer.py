@@ -28,6 +28,7 @@ from struct import unpack
 import sys, os, string, re, copy, urllib
 from datetime import datetime as dt
 from glob import glob
+from os.path import join as pjoin
 import SimpleHTTPServer, SocketServer
 
 STATIC=['skypelogviewer.css', 'js/jquery-1.6.2.min.js', 'js/jquery.collapsible-v.1.3.0.js']
@@ -41,10 +42,13 @@ CMD_SHOW='show'
 CMD_MERGE='merge'
 CMD_CHOOSE='choose'
 
-BASE_HTML = open('main.html', 'r').read()
-CHAT_HTML = open('chat.html', 'r').read()
-HEADER_HTML = open('header.html', 'r').read()
-STARTFORM_HTML = open('startform.html', 'r').read()
+BASE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), 'templates'))
+def template_path(template):
+    return pjoin(BASE_PATH, template)
+BASE_HTML = open(template_path('main.html'), 'r').read()
+CHAT_HTML = open(template_path('chat.html'), 'r').read()
+HEADER_HTML = open(template_path('header.html'), 'r').read()
+STARTFORM_HTML = open(template_path('startform.html'), 'r').read()
 
 class SkypeLog(object):
     def __init__(self, filename, record_size):
