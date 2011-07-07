@@ -1,0 +1,25 @@
+<form id="search_form" name="controlform" action="%(action)s">
+    <fieldset id="searchtab" class="collapsible">
+        <legend>Search:</legend>
+        <input type="text" name="searchbox" id="searchbox" value="%(searchbox_value)s"/>
+    </fieldset>
+    <fieldset id="filteusertab" class="collapsible">
+        <legend>Filter by user:</legend>
+        <select name="userfilter" multiple size=5>
+        %(userfilter_values)s
+        </select>
+    </fieldset>
+    <fieldset id="filterbydate" class="collapsible">
+        <legend>Filter by date:</legend>
+        <p>
+        No tengo ganas de implementar esto, sientanse libres
+        </p>
+    </fieldset>
+    <input type="submit" value="Buscar" />
+    <a href="/">Reset</a>
+</form>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("fieldset.collapsible").collapse({ closed : true });
+    });
+</script>

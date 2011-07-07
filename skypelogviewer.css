@@ -1,0 +1,59 @@
+body p{
+    font: Arial
+}
+span.nickname{
+    font-weight: bold;
+    font-style: italic;
+}
+span.nickname0{
+    color:#000000;
+}
+span.nickname1{
+    color:#FF0000;
+}
+span.nickname2{
+    color:#00FF00;
+}
+span.nickname3{
+    color:#0000FF;
+}
+span.nickname4{
+    color:#FFFF00;
+}
+span.nickname5{
+    color:#00FFFF;
+}
+span.nickname6{
+    color:#FF00FF;
+}
+span.nickname7{
+    color:#C0C0C0;
+}
+span.nickname8{
+    color:#FF9966;
+}
+fieldset, fieldset.collapsible {
+        padding: 10px;
+        border: 1px solid black;
+        border-bottom-width: 1px;
+        border-left-width: 1px;
+        border-right-width: 1px;
+        margin-bottom: 1em;
+}
+fieldset.collapsed {
+        border-bottom-width: 0;
+        border-left-width: 0;
+        border-right-width: 0;
+        margin-bottom: 0;
+        margin-left: 3px;
+}
+legend{
+    color:green;
+    font-style: italic;
+}
+legend.collapsible {
+    font-weight: light;
+}
+legend.collapsed {
+    font-weight: bold;
+}
